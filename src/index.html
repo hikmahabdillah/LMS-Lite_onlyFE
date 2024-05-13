@@ -11,11 +11,19 @@
       <nav class="flex items-center justify-between p-4">
         <div class="main-menu flex items-center gap-5">
           <h2 class="text-2xl font-playfair font-semibold me-5">LMS</h2>
-          <a href="#" class="text-md cursor-pointer">Course</a>
-          <a href="#" class="text-md cursor-pointer">Tasks</a>
+          <a
+            href="#course"
+            class="text-md cursor-pointer hover:scale-105 transition-all duration-300"
+            >Course</a
+          >
+          <a
+            href="#tasks"
+            class="text-md cursor-pointer hover:scale-105 transition-all duration-300"
+            >Tasks</a
+          >
         </div>
         <span
-          class="sign-in-btn text-slate-50 font-semibold bg-neutral-950 px-5 py-2 rounded-full"
+          class="sign-in-btn text-slate-50 font-semibold border-2 border-transparent bg-neutral-950 px-5 py-2 rounded-full hover:bg-transparent hover:border-neutral-950 hover:text-neutral-800 transition-all duration-500"
           ><a href="#"> Sign In </a></span
         >
       </nav>
@@ -69,18 +77,28 @@
           </p>
         </form>
       </div>
-      <section class="course-section flex flex-col gap-2 p-4 items-center">
+
+      <section
+        id="course"
+        class="course-section flex flex-col gap-2 p-4 items-center"
+      >
         <h2 class="text-2xl font-semibold">Course</h2>
         <div class="contain mx-2 p-2 max-w-full">
           <ul
-            class="flex overflow-x-auto p-2 items-center gap-2 w-full [&>li]:font-semibold [&>li]:px-3 [&>li]:py-1 [&>li]:text-sm [&>li]:cursor-pointer"
+            class="course-option flex overflow-x-auto p-2 items-center gap-2 w-full [&>li]:font-semibold [&>li]:px-3 [&>li]:py-1 [&>li]:text-sm [&>li]:cursor-pointer"
           >
-            <li class="bg-gray-200 rounded-full">All</li>
-            <li>Practice</li>
-            <li>Theory</li>
-            <li>Other</li>
             <li
-              class="flex items-center gap-3 rounded-full ring-2 ring-neutral-900"
+              class="course-active transition-all duration-300 hover:scale-110"
+            >
+              All
+            </li>
+            <li class="transition-all duration-300 hover:scale-110">
+              Practice
+            </li>
+            <li class="transition-all duration-300 hover:scale-110">Theory</li>
+            <li class="transition-all duration-300 hover:scale-110">Other</li>
+            <li
+              class="transition-all duration-300 hover:scale-110 flex items-center gap-3 rounded-full ring-2 ring-neutral-900"
             >
               Year
               <svg
@@ -100,25 +118,45 @@
         <div
           class="grid grid-flow-row grid-cols-1 sm:grid-cols-2 w-full p-2 gap-2 place-content-center [&>.matkul]:cursor-pointer"
         >
-          <div class="matkul flex flex-col items-center">
+          <div
+            class="matkul flex flex-col items-center transition-all duration-300 hover:scale-110 hover:p-3"
+          >
+            <!-- {{--
+            <img src="../img/Search.png" class="w-full" height="200px" alt="" />
+            --}} -->
             <div
               class="kotak w-full max-w-[240px] h-[200px] rounded-xl bg-slate-200"
             ></div>
             <h2 class="text-lg font-semibold">Operating System</h2>
           </div>
-          <div class="matkul flex flex-col items-center">
+          <div
+            class="matkul flex flex-col items-center transition-all duration-300 hover:scale-110 hover:p-3"
+          >
+            <!-- {{--
+            <img src="../img/Search.png" class="w-full" height="200px" alt="" />
+            --}} -->
             <div
               class="kotak w-full max-w-[240px] h-[200px] rounded-xl bg-slate-200"
             ></div>
             <h2 class="text-lg font-semibold">Database Practicum</h2>
           </div>
-          <div class="matkul flex flex-col items-center">
+          <div
+            class="matkul flex flex-col items-center transition-all duration-300 hover:scale-110 hover:p-3"
+          >
+            <!-- {{--
+            <img src="../img/Search.png" class="w-full" height="200px" alt="" />
+            --}} -->
             <div
               class="kotak w-full max-w-[240px] h-[200px] rounded-xl bg-slate-200"
             ></div>
             <h2 class="text-lg font-semibold">Interface Design</h2>
           </div>
-          <div class="matkul flex flex-col items-center">
+          <div
+            class="matkul flex flex-col items-center transition-all duration-300 hover:scale-110 hover:p-3"
+          >
+            <!-- {{--
+            <img src="../img/Search.png" class="w-full" height="200px" alt="" />
+            --}} -->
             <div
               class="kotak w-full max-w-[240px] h-[200px] rounded-xl bg-slate-200"
             ></div>
@@ -126,120 +164,138 @@
           </div>
         </div>
       </section>
-      <section class="tasks-section flex flex-col gap-2 p-4 items-center">
+      <section
+        id="tasks"
+        class="tasks-section flex flex-col gap-2 p-4 items-center"
+      >
         <h2 class="text-2xl font-semibold">Tasks</h2>
-        <div class="date-of-week mx-2 p-2 max-w-full">
+        <div class="mx-2 p-2 max-w-full">
           <div
-            class="grid grid-cols-auto grid-rows-3 overflow-x-auto p-2 place-items-center gap-x-4 gap-y-2 w-full [&>span]:font-semibold [&>span]:px-2 [&>span]:py-3 [&>span]:text-base [&>span]:cursor-pointer [&>span]:w-max"
+            class="date-of-week grid grid-cols-auto grid-rows-3 overflow-x-auto p-2 place-items-center gap-x-4 gap-y-2 w-full [&>span]:font-semibold [&>span]:px-2 [&>span]:py-3 [&>span]:text-base [&>span]:cursor-pointer [&>span]:w-max [&>div.task>label]:cursor-pointer"
           >
             <span
-              class="col-start-1 flex flex-col gap-1 rounded-full bg-slate-200 items-center justify-center"
+              class="date-badge col-start-1 flex flex-col gap-1 items-center justify-center"
             >
-              <p>Apr</p>
-              <h3 class="font-bold text-2xl">21</h3>
-              <p>Sun</p>
+              <p class="month">Apr</p>
+              <h3 class="date font-bold text-2xl">21</h3>
+              <p class="day">Sun</p>
             </span>
             <div
               class="task row-start-2 flex flex-col items-center gap-2 px-1 py-5 w-[75px] bg-orange-100 rounded-3xl text-center"
             >
-              <input
-                type="checkbox"
-                class="w-4 h-4 text-neutral-700 bg-transparent border-2 border-neutral-700 rounded focus:ring-neutral-700"
-                name=""
-                id=""
-              />
-              <h3 class="font-semibold text-sm">Linear Algebra</h3>
-              <p class="text-xs">09:00 AM</p>
+              <label for="task-checkbox-1">
+                <input
+                  id="task-checkbox-1"
+                  type="checkbox"
+                  class="w-4 h-4 text-neutral-700 bg-transparent border-2 border-neutral-700 rounded focus:ring-neutral-700"
+                  name=""
+                  id=""
+                />
+                <h3 class="font-semibold text-sm">Linear Algebra</h3>
+                <p class="text-xs">09:00 AM</p>
+              </label>
             </div>
             <div
               class="task row-start-3 flex flex-col items-center gap-2 px-1 py-5 w-[75px] bg-pink-200 rounded-3xl text-center"
             >
-              <input
-                type="checkbox"
-                class="w-4 h-4 text-neutral-700 bg-transparent border-2 border-neutral-700 rounded focus:ring-neutral-700"
-                name=""
-                id=""
-              />
-              <h3 class="font-semibold text-sm">Operating System</h3>
-              <p class="text-xs">09:00 AM</p>
+              <label for="task-checkbox-2">
+                <input
+                  id="task-checkbox-2"
+                  type="checkbox"
+                  class="w-4 h-4 text-neutral-700 bg-transparent border-2 border-neutral-700 rounded focus:ring-neutral-700"
+                  name=""
+                  id=""
+                />
+                <h3 class="font-semibold text-sm">Operating System</h3>
+                <p class="text-xs">09:00 AM</p>
+              </label>
             </div>
             <span
-              class="col-start-2 flex flex-col gap-1 items-center justify-center"
+              class="date-badge col-start-2 flex flex-col gap-1 items-center justify-center"
             >
-              <p>Apr</p>
-              <h3 class="font-bold text-2xl">22</h3>
-              <p>Mon</p>
+              <p class="month">Apr</p>
+              <h3 class="date font-bold text-2xl">22</h3>
+              <p class="day">Mon</p>
             </span>
             <span
-              class="col-start-3 flex flex-col gap-1 items-center justify-center"
+              class="date-badge col-start-3 flex flex-col gap-1 items-center justify-center"
             >
-              <p>Apr</p>
-              <h3 class="font-bold text-2xl">23</h3>
-              <p>Tue</p>
+              <p class="month">Apr</p>
+              <h3 class="date font-bold text-2xl">23</h3>
+              <p class="day">Tue</p>
             </span>
             <div
               class="task col-start-3 row-start-2 flex flex-col items-center gap-2 px-1 py-5 w-[75px] bg-lime-400 rounded-3xl text-center"
             >
-              <input
-                type="checkbox"
-                class="w-4 h-4 text-neutral-700 bg-transparent border-2 border-neutral-700 rounded focus:ring-neutral-700"
-                name=""
-                id=""
-              />
-              <h3 class="font-semibold text-sm">Interface Design</h3>
-              <p class="text-xs">09:00 AM</p>
+              <label for="task-checkbox-3">
+                <input
+                  id="task-checkbox-3"
+                  type="checkbox"
+                  class="w-4 h-4 text-neutral-700 bg-transparent border-2 border-neutral-700 rounded focus:ring-neutral-700"
+                  name=""
+                  id=""
+                />
+                <h3 class="font-semibold text-sm">Interface Design</h3>
+                <p class="text-xs">09:00 AM</p>
+              </label>
             </div>
             <span
-              class="col-start-4 flex flex-col gap-1 items-center justify-center"
+              class="date-badge col-start-4 flex flex-col gap-1 items-center justify-center"
             >
-              <p>Apr</p>
-              <h3 class="font-bold text-2xl">24</h3>
-              <p>Wed</p>
+              <p class="month">Apr</p>
+              <h3 class="date font-bold text-2xl">24</h3>
+              <p class="day">Wed</p>
             </span>
             <div
               class="task col-start-4 row-start-2 flex flex-col items-center gap-2 px-1 py-5 w-[75px] bg-orange-100 rounded-3xl text-center"
             >
-              <input
-                type="checkbox"
-                class="w-4 h-4 text-neutral-700 bg-transparent border-2 border-neutral-700 rounded focus:ring-neutral-700"
-                name=""
-                id=""
-              />
-              <h3 class="font-semibold text-sm">Linear Algebra</h3>
-              <p class="text-xs">09:00 AM</p>
+              <label for="task-checkbox-4">
+                <input
+                  id="task-checkbox-4"
+                  type="checkbox"
+                  class="w-4 h-4 text-neutral-700 bg-transparent border-2 border-neutral-700 rounded focus:ring-neutral-700"
+                  name=""
+                  id=""
+                />
+                <h3 class="font-semibold text-sm">Linear Algebra</h3>
+                <p class="text-xs">09:00 AM</p>
+              </label>
             </div>
             <span
-              class="col-start-5 flex flex-col gap-1 items-center justify-center"
+              class="date-badge col-start-5 flex flex-col gap-1 items-center justify-center"
             >
-              <p>Apr</p>
-              <h3 class="font-bold text-2xl">25</h3>
-              <p>Thu</p>
+              <p class="month">Apr</p>
+              <h3 class="date font-bold text-2xl">25</h3>
+              <p class="day">Thu</p>
             </span>
             <span
-              class="col-start-6 flex flex-col gap-1 items-center justify-center"
+              class="date-badge col-start-6 flex flex-col gap-1 items-center justify-center"
             >
-              <p>Apr</p>
-              <h3 class="font-bold text-2xl">26</h3>
-              <p>Fri</p>
+              <p class="month">Apr</p>
+              <h3 class="date font-bold text-2xl">26</h3>
+              <p class="day">Fri</p>
             </span>
             <div
               class="task col-start-6 row-start-2 flex flex-col items-center gap-2 px-1 py-5 w-[75px] bg-indigo-500 rounded-3xl text-center"
             >
-              <input
-                type="checkbox"
-                class="w-4 h-4 text-neutral-700 bg-transparent border-2 border-neutral-700 rounded focus:ring-neutral-700"
-                name=""
-                id=""
-              />
-              <h3 class="font-semibold text-sm">Software Engine</h3>
-              <p class="text-xs">09:00 AM</p>
+              <label for="task-checkbox-5">
+                <input
+                  id="task-checkbox-5"
+                  type="checkbox"
+                  class="w-4 h-4 text-neutral-700 bg-transparent border-2 border-neutral-700 rounded focus:ring-neutral-700"
+                  name=""
+                  id=""
+                />
+                <h3 class="font-semibold text-sm">Software Engine</h3>
+                <p class="text-xs">09:00 AM</p>
+              </label>
             </div>
             <span
-              class="col-start-7 flex flex-col gap-1 items-center justify-center"
+              class="date-badge col-start-7 flex flex-col gap-1 items-center justify-center"
             >
-              <p>Apr</p>
-              <h3 class="font-bold text-2xl">27</h3>
-              <p>Sat</p>
+              <p class="month">Apr</p>
+              <h3 class="date font-bold text-2xl">27</h3>
+              <p class="day">Sat</p>
             </span>
           </div>
         </div>
@@ -251,12 +307,7 @@
         </p>
       </footer>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-    <script>
-      const currentYearElement = document.getElementById("currentYear");
-      const currentYear = new Date().getFullYear();
-      currentYearElement.textContent = currentYear;
-    </script>
+    <script src="js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   </body>
 </html>
