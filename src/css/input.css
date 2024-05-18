@@ -9,6 +9,21 @@
     @apply bg-gray-200 rounded-full;
   }
   .date-active {
-    @apply rounded-full bg-slate-200;
+    @apply rounded-full lg:rounded-xl bg-slate-200;
+  }
+  .sticky-navbar {
+    @apply max-h-[100px] backdrop-blur-lg transition-all duration-700 border-b border-neutral-300;
+  }
+  .nav-sticky {
+    @apply z-30 transition-all duration-700 top-0 left-0 sticky w-full;
+  }
+  .hover-img {
+    @apply transition-transform duration-300 hover:scale-125 hover:rotate-6;
+  }
+  .img-style {
+    @apply max-w-[240px] h-[170px] sm:h-[210px] rounded-xl overflow-hidden;
+  }
+  .grid-cols-r-7 {
+    grid-template-columns: repeat(7, 1fr);
   }
 }
