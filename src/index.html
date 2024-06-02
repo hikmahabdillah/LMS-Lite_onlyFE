@@ -45,7 +45,7 @@
             alt="user photo"
           />
           <span class="font-semibold text-base hidden sm:inline"
-            >Hi, Aldrin's Girlfriend</span
+            >Hi, Erineee</span
           >
         </button>
         <!-- Dropdown menu -->
@@ -55,7 +55,7 @@
         >
           <div class="px-4 py-3">
             <span class="block font-semibold text-sm text-neutral-900"
-              >Aldrin's Girlfriend</span
+              >Erineee</span
             >
             <span
               class="block text-sm text-gray-500 truncate dark:text-gray-400"
@@ -264,6 +264,50 @@
         class="tasks-section flex flex-col gap-2 p-4 items-center"
       >
         <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold">Tasks</h2>
+        <div aria-label="Page navigation example" class="mt-3">
+          <ul class="inline-flex items-center -space-x-px text-base h-10">
+            <span class="sr-only" class="cursor-pointer">Previous</span>
+            <svg
+              id="prevWeek"
+              class="w-3.5 h-3.5 rtl:rotate-180 cursor-pointer"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 1 1 5l4 4"
+              />
+            </svg>
+
+            <span
+              class="weekOption flex items-center justify-center px-6 h-10 font-semibold leading-tight text-neutral-800 bg-white hover:bg-gray-100 hover:text-gray-700 text-base sm:text-lg"
+              >Week -</span
+            >
+
+            <span class="sr-only" class="cursor-pointer">Next</span>
+            <svg
+              id="nextWeek"
+              class="w-3.5 h-3.5 rtl:rotate-180 cursor-pointer"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 9 4-4-4-4"
+              />
+            </svg>
+          </ul>
+        </div>
         <div class="mx-2 p-2 w-full flex justify-center">
           <div
             class="date-of-week grid max-w-lg sm:max-w-2xl lg:max-w-3xl xl:max-w-4xl w-full grid-cols-r-7 grid-rows-3 overflow-x-auto p-2 place-items-center gap-x-4 gap-y-2 [&>span]:font-semibold [&>span]:px-2 [&>span]:py-3 [&>span]:text-base lg:[&>span]:text-lg [&>span]:cursor-pointer [&>div.task>label]:cursor-pointer"
