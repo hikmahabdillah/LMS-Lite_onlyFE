@@ -43,20 +43,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const dateBadge = document.querySelectorAll(".date-badge");
   const currentDate = new Date(manipulationDate);
   const optionWeeks = document.querySelector(".weekOption");
-  const minWeekDate = new Date(currentYear, 1, 11);
+  const minWeekDate = new Date(currentYear, 1, 18);
   const getWeek = function () {
     const firstDayOfYear = new Date(minWeekDate);
     const pastDaysOfYear = (currentDate - firstDayOfYear) / 86400000; // 86400000 ms in a day
     return Math.ceil((pastDaysOfYear + firstDayOfYear.getDay() + 1) / 7);
   };
 
+  const dayOfWeekStart = manipulationDate.getDay();
   // for each per week
   // get param dateElement & index, where the index start from 0 to 6
   dateOfWeek.forEach((dateElement, index) => {
     const startOfWeek = new Date(); //set date, when week start from sun
 
     // what a day of the week is it now like mon is day-1. cause start from 0
-    const dayOfWeekStart = startOfWeek.getDay();
     console.log(`current date : ${manipulationDate.getDate()}`);
     console.log(`dayOfWeekStart : day ${dayOfWeekStart}`);
 
@@ -119,7 +119,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextWeek = document.getElementById("nextWeek");
 
   // for restart current date to prev week
-  manipulationDate.setDate(manipulationDate.getDate() - 1);
+  manipulationDate.setDate(manipulationDate.getDate() - dayOfWeekStart);
+
+  if (getWeek() > 15) {
+    nextWeek.style.display = "none";
+  }
 
   function changeWeek() {
     console.log(manipulationDate);
@@ -168,8 +172,8 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(currentValue);
 
     if (currentValue < previousValue) {
-      manipulationDate.setDate(manipulationDate.getDate() - 14);
       console.log(manipulationDate);
+      manipulationDate.setDate(manipulationDate.getDate() - 14);
       nextWeek.style.display = "block";
       changeWeek();
     }
@@ -181,7 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
     previousValue = currentValue;
     currentValue += 1;
 
-    if (currentValue == 19) {
+    if (currentValue > 15) {
       nextWeek.style.display = "none";
     }
 
